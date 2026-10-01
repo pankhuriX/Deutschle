@@ -1,0 +1,37 @@
+{
+  "name": "deutschle",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A mobile-first German vocabulary word guessing game inspired by Wordle. The visual foundation includes a dark, mobile-first shell, a 5 \u00d7 6 board, and a German keyboard. Physical and virtual keyboards enter up to five letters per row; Backspace deletes from the current row. Enter locks a complete five-letter guess and advances to the next row. Input stops after six submitted guesses. Submitted guesses are evaluated with duplicate-aware letter matching and lime, purple, or dark gray tiles. Input and game state live in `src/hooks/useGame.ts`.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate:data && npm run typecheck && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "validate:data": "node scripts/validate-vocabulary.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc -b",
+    "generate:words": "node scripts/generateGermanWords.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "hunspell-reader": "10.3.6",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
