@@ -12,7 +12,7 @@ type HowToPlayModalProps = { open: boolean; onClose: () => void }
 export function HowToPlayModal({ open, onClose }: HowToPlayModalProps) {
   return (
     <Modal open={open} onClose={onClose} titleId="instructions-title">
-      <h2 id="instructions-title" className="modal-title" tabIndex={-1} data-modal-title>
+      <h2 id="instructions-title" className="modal-title onboarding-title" tabIndex={-1} data-modal-title>
         Willkommen bei <span>Deutschle</span>
       </h2>
       <p className="modal-intro">Errate das deutsche Wort in sechs Versuchen.</p>

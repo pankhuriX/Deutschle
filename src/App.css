@@ -373,6 +373,8 @@
   outline: 2px solid var(--color-lime);
   outline-offset: 4px;
 }
+/* The onboarding heading receives initial dialog focus but is not a control. */
+.onboarding-title:focus-visible { outline: none; }
 @media (forced-colors: active) {
   .letter-tile, .keyboard-key { border: 1px solid CanvasText; }
   :focus-visible { outline-color: Highlight; }
